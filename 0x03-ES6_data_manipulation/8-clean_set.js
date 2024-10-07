@@ -8,6 +8,9 @@ export default function cleanSet(set, startString) {
       }
     }
   }
+  else {
+    return '';
+  }
   if (result.length > 0) {
     result = result.slice(0, -1);
   }
