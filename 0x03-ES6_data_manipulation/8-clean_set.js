@@ -1,5 +1,5 @@
 export default function cleanSet(set, startString) {
-  let result = '';
+  let result = [];
 
   if (typeof startString !== 'string'
       || startString.length === 0
@@ -7,12 +7,9 @@ export default function cleanSet(set, startString) {
     return '';
   }
   for (const value of set) {
-    if (value.startsWith(startString)) {
-      result += `${value.replace(startString, '')}-`;
+    if (value && value.startsWith(startString)) {
+      result.push(`${value.replace(startString, '')}`);
     }
   }
-  if (result.length > 0) {
-    result = result.slice(0, -1);
-  }
-  return result;
+  return result.join('-');
 }
