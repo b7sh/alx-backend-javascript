@@ -40,3 +40,14 @@ export function createEmployee(salary: (string | number)): (Teacher | Director){
   }
   return new Director;
 }
+
+export function isDirector(employee: (Teacher | Director)) {
+    return employee instanceof Director;
+}
+
+export function executeWork(employee: (Teacher | Director)) {
+    if (isDirector(employee)) {
+        return (employee as Director).workDirectorTasks();
+  }
+  return (employee as Teacher).workTeacherTasks();
+}
