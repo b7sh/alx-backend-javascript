@@ -4,7 +4,8 @@
   "description": "This is the readme file for: \t0x06. Unittests in JS",
   "main": "index.js",
   "dependencies": {
-    "chai": "^5.1.2"
+    "chai": "^5.1.2",
+    "sinon": "^19.0.2"
   },
   "devDependencies": {
     "mocha": "^10.8.2"
